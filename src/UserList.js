@@ -1,6 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 const User = ({ user, onRemove, onToggle }) => {
+
+  useEffect(() => {
+    console.log('hello');
+    return () => {
+      console.log('bye');
+    }
+  }, []);
+
   const style = {
     cursor: "pointer",
     color: user.active ? "green" : "black"
